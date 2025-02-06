@@ -1,0 +1,23 @@
+/*
+Copyright 2025 Adobe
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it.
+*/
+package com.adobe.mkto.assetcopy.model;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+@Builder
+public class FieldPosition {
+    private Integer columnNumber;
+    private List<FieldPosition> fieldList;
+    private String fieldName;
+    private Integer rowNumber;
+}

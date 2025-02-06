@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: asset-copy
+  jackson:
+    default-property-inclusion: non_null
+  security:
+    oauth2:
+      client:
+        registration:
+          source:
+            provider: source
+            client-id:
+            client-secret:
+            authorization-grant-type: client_credentials
+          destination:
+            provider: destination
+            client-id:
+            client-secret:
+            authorization-grant-type: client_credentials
+        provider:
+          source:
+            token-uri:
+          destination:
+            token-uri:
+com:
+  adobe:
+    mkto:
+      assetcopy:
+        workspaces: #list of workspaces to copy landing pages from
+        page-ids: #list of landing pages ids to copy if provided
+        cutoff-time: 2024-10-01T00:00:00Z+0000 #the cutoff last-updated time for landing pages to copy
+        page-url-format: #landing page url format for the copied pages
+        rest:
+          source-url:
+          destination-url:
+logging:
+  level:
+    root: info
